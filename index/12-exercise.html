@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12 exercise</title>
+    </head>
+    <body>
+
+        <button class="js-start" onclick="
+            clickButton();
+            ">Start</button>
+
+
+        <script>
+            
+            // 12(a) 12(b)
+
+            // const add = function(){
+            //     console.log(2+3);
+            // }
+
+            // for(i=5; i!=0; i--){
+            //     add();
+            // }
+
+            // runTwice(function(){
+            //     console.log('12b');
+            // });
+
+            // runTwice(add);
+
+            // function runTwice(fun){
+            //     fun();
+            //     fun();
+            // }
+
+            function clickButton() {
+                document.querySelector('.js-start').innerHTML = 'Loading...';
+                setTimeout(function renderButton(){
+                    document.querySelector('.js-start').innerHTML = 'Finished!';
+                },1000);
+            }
+            
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>objects</title>
+</head>
+
+<body>
+
+    <script>
+        /*const product = {
+            name: 'socks',
+            price: 1090,
+            'delivery-time': '1 day', //['delivery-time'] can also be used
+            rating: {
+                stars: 4.5,
+                count: 87 //nested objects
+            },
+            fun: function f1(){
+                console.log('this is a function inside object called method')
+            }
+        }
+
+        console.log(product); //typeof - object
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks'; //update a value
+        console.log(product);
+
+        product.newProperty = true; //add new property
+        console.log(product);
+
+        delete product.newProperty; //delete new property
+        console.log(product);
+
+        console.log(product['delivery-time']); //bracket notation is used for such names otherwise js will consider - as minus and error will be thrown
+
+        console.log(product.rating.count);
+        
+        product.fun();
+
+        console.log(JSON.stringify(product));
+        
+        const jsonString = JSON.stringify(product); //stringify conerts to string
+        
+        console.log(JSON.parse(jsonString)); */
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+        message: 'hello',
+        price: 799
+      };
+      const object2 = object1;
+
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job!',
+        price: 799
+      };
+
+      console.log(object1 === object3); //will give false
+      console.log(object1 === object2); //will give true
+
+      // const message = object1.message;
+      const { message } = object1; //called Destructuring same as  above
+
+      const object4 = {
+        // message: message,
+        message, //short hand property
+
+        // method: function function1() {
+            // console.log('method');
+        // },
+        method(){
+            console.log('method'); //shorthand method syntax
+        }
+      }
+
+    </script>
+
+</body>
+
+</html>

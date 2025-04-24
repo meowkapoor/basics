@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>dom projects with css</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        .subscribe-button {
+            background-color: black;
+            color: white;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .subscribed-button {
+            background-color: rgb(240,240,240);
+            color: black;
+        }
+
+        .css-box {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .css-calc-button {
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            /* padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 15px;
+            padding-right: 15px; */
+            padding: 12px 15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+        subscribe();
+    " class="js-subscribe-button subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = FREE shipping</p>
+
+    <input class="js-cost css-box" placeholder="Cost of order" onkeydown="
+        handleKeydown(event)
+    ">
+    <button class="css-calc-button" onclick="
+        calculateCost()
+    ">Calculate</button>
+    <p class="js-cost-output"></p>
+
+    <script>
+        function handleKeydown(event) {
+            if (event.key === 'Enter') {
+                calculateCost();
+             }
+        }
+
+        function calculateCost() {
+            const costElement = document.querySelector('.js-cost');
+            let cost = Number(costElement.value); //input box value use .value - DOM gives string so use Number()
+
+            if (cost<=40) {
+                cost+=10;
+            }
+
+            document.querySelector('.js-cost-output').innerHTML = `$${cost}`
+        }
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('subscribed-button');
+            } else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('subscribed-button');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

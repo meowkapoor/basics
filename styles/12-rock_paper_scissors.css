@@ -1,0 +1,45 @@
+body {
+    font-family: Arial;
+    background-color: rgb(25,25,25);
+    color: white;
+}
+
+.css-heading {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.css-mov {
+    background-color: transparent;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 25px; 
+    /*color: white;
+    padding: 30px;*/
+}
+
+.css-moves {
+    height: 50px;
+}
+
+.css-result {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.css-scoreboard {
+    margin-top: 60px;
+}
+
+.css-reset-button,
+.css-auto-play {
+    font-size: 15px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 15px;
+}
